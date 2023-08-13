@@ -1,0 +1,36 @@
+import React from "react";
+
+const About = (props) => {
+  return (
+    <>
+      <div class="aboutus">
+
+        <h1 id="event">ABOUT XIENTIA</h1>
+
+        <div class="aboutusmain">
+
+          <div class="aboutuscontent">
+            <p>
+              Sigma-Xi presents Xientia - a symposium on the increasingly relevant importance of Technology in Sustainability. 
+              The event features 4 esteemed speakers,
+              who are well-versed in diverse research domains concerned with
+              Environmental Health and Sustainable Development. Deliberation
+              will be held among the speakers, enlightening the audience about
+              the effects of pollution on health and the environment, and ways
+              to achieve sustainability.
+            </p>
+            <p>
+              We are also conducting an exciting Ideathon on Development for Sustainability.
+              Participants of the Ideathon will be able to
+              showcase their resolve to tackle this global issue by coming up
+              with sustainability models and stand a chance to win from a prize
+              pool of Rs 15000.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default About;
