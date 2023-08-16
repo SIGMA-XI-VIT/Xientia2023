@@ -1,21 +1,21 @@
 import React from "react";
+import '../styles/Home.scss'
 import Countdown from "../components/Countdown";
-import SubmitIdeas from "../components/SubmitIdeas";
 import Groups from "../components/Groups";
-import Speakers from "./Speakers";
-import Sponsors from "./Sponsors";
 
 const Home = (props) => {
   return (
     <div className="home-container">
-      <div className="mainHome">
+      <div className="homeBox">
         <h1 className="homeTitle">XIENTIA</h1>
 
         <p className="homeText">Visionary Minds, Sustainable Futures</p>
-
         <Countdown any />
-        <SubmitIdeas any />
-        <Groups any />
+        <div className="links">
+          <div className="groups1">
+            <Groups any />
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -1,4 +1,5 @@
 import React from "react";
+import '../styles/Countdown.scss';
 
 const Countdown = (props) => {
   var finalDate = new Date("Sep 22, 2023 12:00:00").getTime();
