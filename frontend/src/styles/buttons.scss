@@ -1,3 +1,5 @@
+$secondary-color: rgba(255, 255, 255, 0.4); 
+
 .groups{
     display: flex;
     flex-direction: row;
@@ -6,13 +8,21 @@
 }
 .button{
     button{
-        background-color: rgba(89, 89, 89, 0.4);
+        background-color: rgba(89, 89, 89, 0);
         border-radius: 0.5rem;
-        border: 1px solid rgba(0, 0, 0, 0);
+        border: 1px solid rgba(245, 245, 245, 0.3);
         box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
         color: rgba(245, 245, 245, 0.8);
         text-align: center;
         padding: 1rem 0.9rem;
     }
     padding: 0.2rem 0.5rem;
+}
+button:hover{
+    border-color: rgba(245, 245, 245, 0.4);
+    background-color: rgba(89, 89, 89, 0.1);
+}
+button:active{
+    border-color: rgba(245, 245, 245, 0.8);
+    background-color: rgba(89, 89, 89, 0.2);
 }
