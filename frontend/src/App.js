@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import * as ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import './styles/app.css'
+import './styles/app.scss'
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Rules from "./pages/Rules";
@@ -9,10 +9,13 @@ import Speakers from "./pages/Speakers";
 import Sponsors from "./pages/Sponsors";
 import Contact from "./pages/Contact";
 import Submit from "./pages/Submit";
+import Menu from "./components/Menu";
 
 const App = () => {
   return (
     <div className="container">
+      <div className="background"></div>
+      <Menu any />
       <Home any />
       <About any />
       <Rules any />

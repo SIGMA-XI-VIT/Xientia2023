@@ -1,16 +1,21 @@
 import React from "react";
+import '../styles/buttons.scss';
 
 const Groups = (props) => {
   return (
-    <>
-      <a href="">
-        <button id="whatsapp">Join the event's WhatsApp Group</button>
-      </a>
+    <div className="groups">
+      <div className="button">
+        <a href="">
+          <button id="whatsapp">Join the WhatsApp Group</button>
+        </a>
+      </div>
 
-      <a href="">
-        <button id="discord">Join our Discord Server</button>
-      </a>
-    </>
+      <div className="button">
+        <a href="">
+          <button id="discord">Join our Discord Server</button>
+        </a>
+      </div>
+    </div>
   );
 };
 
