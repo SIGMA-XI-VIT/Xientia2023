@@ -39,15 +39,19 @@
 }
 
 .aboutusmain{
+    translate: 0 -5%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
+    overflow: auto;
+    overflow-wrap: normal;
+    scroll-behavior: smooth;
+    scroll-snap-align: start;
 }
 
 .para1, .para2{
-    translate: 0 -20%;
     font: normal normal 500 18px Mulish;
     letter-spacing: 0.05em;
     padding: 2em;

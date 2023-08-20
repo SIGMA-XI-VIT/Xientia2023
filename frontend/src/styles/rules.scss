@@ -49,21 +49,26 @@
     display: flex;
     flex-wrap: wrap;
     padding: 0 6em;
+    overflow: auto;
+    overflow-wrap: break-word;
+    scroll-behavior: smooth;
+    scroll-snap-align: start;
 }
 
 .text{
     translate: 0 -20%;
     font: normal normal 500 18px Mulish;
     letter-spacing: 0.05em;
-    padding: 0.8em;
+    padding: 0.6em;
 }
 
 .text6{
-    translate: 0 -20%;
     font: normal normal 500 18px Mulish;
     letter-spacing: 0.05em;
-    padding: 2.5em 0.8em 0em;
+    padding: .8em;
+    translate: 0 -5%;
 }
+
 
 .a{
     padding: 0.7em;
