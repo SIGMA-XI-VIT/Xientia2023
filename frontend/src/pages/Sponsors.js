@@ -3,7 +3,7 @@ import React from "react";
 const Sponsors = (props) => {
   return (
     <>
-      <div class="sponsors" id="nav4">
+      <div className="sponsors" id="nav4">
         <h1>SPONSORS</h1>
         <a
           href=""

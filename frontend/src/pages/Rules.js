@@ -9,7 +9,7 @@ const Rules = (props) => {
           <h1 id="rulesTitle">GUIDELINES</h1>
         </div>
 
-        <div class="mainrules">
+        <div className="mainrules">
           <ol>
             <li className="text">
               Your innovation should focus towards providing novel solutions to

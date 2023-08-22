@@ -5,7 +5,7 @@ const About = (props) => {
   return (
     <>
       <div className="aboutcontainer">
-        <div class="aboutus">
+        <div className="aboutus">
           <div className="heading">
             <h1 id="event">ABOUT XIENTIA</h1>
           </div>

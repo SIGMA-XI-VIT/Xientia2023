@@ -9,20 +9,20 @@ import Speakers from "./pages/Speakers";
 import Sponsors from "./pages/Sponsors";
 import Contact from "./pages/Contact";
 import Submit from "./pages/Submit";
-import Menu from "./components/Menu";
+import Menu1 from "./components/Menu";
 
 const App = () => {
   return (
     <div className="container">
       <div className="background"></div>
-      <Menu any />
-      <Home any />
-      <About any />
-      <Rules any />
-      <Speakers any />
-      <Sponsors any />
-      <Contact any />
-      <Submit any />
+      <Menu1 any />
+        <Home any />
+        <About any />
+        <Rules any />
+        <Speakers any />
+        <Sponsors any />
+        <Contact any />
+        <Submit any />
     </div>
   );
 };
