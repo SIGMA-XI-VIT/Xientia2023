@@ -46,27 +46,38 @@
 }
 
 .mainrules{
+    height: 100%;
     display: flex;
     flex-wrap: wrap;
     padding: 0 6em;
-}
-
-.text{
-    translate: 0 -20%;
-    font: normal normal 500 18px Mulish;
-    letter-spacing: 0.05em;
-    padding: 0.8em;
-}
-
-.text6{
-    translate: 0 -20%;
-    font: normal normal 500 18px Mulish;
-    letter-spacing: 0.05em;
-    padding: 2.5em 0.8em 0em;
+    overflow: auto;
+    overflow-wrap: break-word;
+    scroll-behavior: smooth;
+    scroll-snap-align: start;
 }
 
 .a{
-    padding: 0.7em;
+    padding: 0.4em;
     translate: 10%;
-    list-style-type: disc;
+}
+
+.mainrules>ol{
+    list-style: disc;
+
+}
+
+.text{
+    font: normal normal 500 18px Mulish;
+    letter-spacing: 0.05em;
+    padding: 0.6em;
+}
+
+#seven{
+    translate: 0 -1em;
+}
+
+.text6{
+    font: normal normal 500 18px Mulish;
+    letter-spacing: 0.05em;
+    padding: 0.6em;
 }

@@ -26,20 +26,20 @@ const Countdown = (props) => {
   }, 1000);
 
   return (
-    <div class="time_left">
-      <div class="time">
+    <div className="time_left">
+      <div className="time">
         <p id="days"></p>
         <p>Days</p>
       </div>
-      <div class="time">
+      <div className="time">
         <p id="hours"></p>
         <p>Hours</p>
       </div>
-      <div class="time">
+      <div className="time">
         <p id="mins"></p>
         <p>Minutes</p>
       </div>
-      <div class="time">
+      <div className="time">
         <p id="sec"></p>
         <p>Seconds</p>
       </div>

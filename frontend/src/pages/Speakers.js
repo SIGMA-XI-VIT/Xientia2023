@@ -1,76 +1,50 @@
 import React from "react";
+import "../styles/speakers.scss";
 
 const Speakers = (props) => {
   return (
     <>
-      <div class="speakers" id="nav3">
+      <div className="speakers" id="nav3">
+        <div className="main_speakers">
+          <h1>SPEAKERS</h1>
+          <div className="cardxs">
+            <div className="cardx" id="c1">
+              <img src="../shared/monkey meme.png" className="photo" alt="" />
 
-        <h1>SPEAKERS</h1>
-
-        <div class="main_speakers">
-
-          <div class="leftbtn" id="goleft">
-            <ion-icon name="arrow-back-outline"></ion-icon>
-          </div>
-
-          <div class="card" id="c1">
-
-            <img src="../shared/monkey meme.png" class="photo" alt="" />
-            <hr class="odd" />
-
-            <div class="card_main">
-              <h3>Person 1</h3>
-              <h4>Chief Cool</h4>
-              <img src="../shared/monkey meme.png" class="logo" alt="" />
+              <div className="cardx_main">
+                <p className="text1">Person 1</p>
+                <p className="text2"> Chief Cool </p>
+              </div>
             </div>
 
-          </div>
+            <div className="cardx" id="c2">
+              <img src="../shared/monkey meme.png" className="photo" alt="" />
 
-          <div class="card" id="c2">
-
-            <img src="../shared/monkey meme.png" class="photo" alt="" />
-            <hr class="even" />
-
-            <div class="card_main">
-              <h3>Person 2</h3>
-              <h4>Senior Chief Cool</h4>
-              <img src="../shared/monkey meme.png" class="logo" alt="" />
+              <div className="cardx_main">
+                <p className="text1">Person 2</p>
+                <p className="text2">Senior Chief Cool</p>
+              </div>
             </div>
 
-          </div>
+            <div className="cardx" id="c3">
+              <img src="../shared/monkey meme.png" className="photo" alt="" />
 
-          <div class="card" id="c3">
-
-            <img src="../shared/monkey meme.png" class="photo" alt="" />
-            <hr class="odd" />
-
-            <div class="card_main">
-              <h3>Person 3</h3>
-              <h4>Chief Maybe</h4>
-              <img src="../shared/monkey meme.png" class="logo" alt="" />
+              <div className="cardx_main">
+                <p className="text1">Person 3</p>
+                <p className="text2">Chief Maybe</p>
+              </div>
             </div>
 
-          </div>
+            <div className="cardx" id="c4">
+              <img src="../shared/monkey meme.png" className="photo" alt="" />
 
-          <div class="card" id="c4">
-
-            <img src="../shared/monkey meme.png" class="photo" alt="" />
-            <hr class="even" />
-
-            <div class="card_main">
-              <h3>Person 4</h3>
-              <h4>Senior Chief Awesome</h4>
-              <img src="../shared/monkey meme.png" class="logo" alt="" />
+              <div className="cardx_main">
+                <p className="text1">Person 4</p>
+                <p className="text2">Senior Chief Awesome</p>
+              </div>
             </div>
-
           </div>
-
-          <div class="rightbtn" id="goright">
-            <ion-icon name="arrow-forward-outline"></ion-icon>
-          </div>
-
         </div>
-
       </div>
     </>
   );

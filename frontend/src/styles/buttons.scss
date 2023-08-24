@@ -1,4 +1,9 @@
 $secondary-color: rgba(255, 255, 255, 0.4); 
+$btn-hover-bg-tint-amount: 0%;
+$btn-active-bg-tint-amount: 20%;
+
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+@import '../../node_modules/bootstrap/scss/buttons';
 
 .groups{
     display: flex;

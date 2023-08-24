@@ -1,10 +1,15 @@
 import React from "react";
+import '../styles/sponsors.scss';
 
 const Sponsors = (props) => {
   return (
     <>
-      <div class="sponsors" id="nav4">
-        <h1>SPONSORS</h1>
+      <div className="sponsors" id="nav4">
+        <div className="main_sponsors">
+          <div className="sponsortitle">
+            <h1>SPONSORS</h1>
+          </div> 
+
         <a
           href=""
           target="_blank"
@@ -14,6 +19,7 @@ const Sponsors = (props) => {
             </p>
           <img src="../shared/monkey meme.png" alt="" />
         </a>
+        </div>
       </div>
     </>
   );

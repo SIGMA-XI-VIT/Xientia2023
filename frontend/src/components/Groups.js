@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "react-bootstrap";
 import '../styles/buttons.scss';
 
 const Groups = (props) => {
@@ -6,13 +7,13 @@ const Groups = (props) => {
     <div className="groups">
       <div className="button">
         <a href="">
-          <button id="whatsapp">Join the WhatsApp Group</button>
+          <Button variant="dark">Join the WhatsApp Group</Button>
         </a>
       </div>
 
       <div className="button">
         <a href="">
-          <button id="discord">Join our Discord Server</button>
+        <Button variant="dark">Join our Discord Server</Button>
         </a>
       </div>
     </div>

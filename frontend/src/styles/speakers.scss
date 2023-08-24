@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-.aboutcontainer{
+.speakers{
     height: 100vh;
     width: 100%;
     display: flex;
@@ -12,10 +12,11 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    position: relative;   
+    position: relative;  
 }
-.aboutus{
-    height: 40rem;
+
+.main_speakers{
+    height: 80%;
     max-width: 90rem;
     min-width: 30rem;
     width: 100%;
@@ -31,28 +32,40 @@
     border-radius: 2.5rem;
     border: 2px solid rgba(245, 245, 245, 0.2);
 }
-
-.heading{
-    font: normal normal 700 32px monospace;
-    translate: 0 -20%;
-    padding: 1rem;
+.cardxs{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    flex: 1 1 40vw;
 }
-
-.aboutusmain{
-    translate: 0 -5%;
+.cardx{
+    height: 30vh;
+    width: 30vw;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-evenly;
-    overflow: auto;
-    overflow-wrap: normal;
-    scroll-behavior: smooth;
-    scroll-snap-align: start;
+    justify-content: space-between;
+    padding: 2rem;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px rgba(12, 12, 12, 0);
+    background: rgba(171, 171, 171, 0);
+}
+.cardx-main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main_speakers>h1{
+    width: 5.5em;
 }
 
-.para1, .para2{
-    font: normal normal 500 18px Mulish;
+.text1, .text2{
+    font: normal normal 700 14px Mulish;
     letter-spacing: 0.05em;
-    padding: 2em;
+    text-align: center;
+    color: #fff;
 }

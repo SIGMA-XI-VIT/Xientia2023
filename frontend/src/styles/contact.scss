@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-.aboutcontainer{
+.container{
     height: 100vh;
     width: 100%;
     display: flex;
@@ -14,7 +14,8 @@
     justify-content: center;
     position: relative;   
 }
-.aboutus{
+
+.contact{
     height: 40rem;
     max-width: 90rem;
     min-width: 30rem;
@@ -23,6 +24,7 @@
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+    overflow: auto;
     align-items: center;
     justify-content: space-evenly;
     color: whitesmoke;
@@ -32,27 +34,26 @@
     border: 2px solid rgba(245, 245, 245, 0.2);
 }
 
-.heading{
-    font: normal normal 700 32px monospace;
-    translate: 0 -20%;
-    padding: 1rem;
-}
-
-.aboutusmain{
-    translate: 0 -5%;
+.main_contact{
+    height: 20em;
+    max-width: 60em;
+    min-width: calc(30em - 25px);
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
-    overflow: auto;
-    overflow-wrap: normal;
-    scroll-behavior: smooth;
-    scroll-snap-align: start;
+    padding:15px
 }
 
-.para1, .para2{
-    font: normal normal 500 18px Mulish;
-    letter-spacing: 0.05em;
-    padding: 2em;
+.cardx_main{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    overflow: auto;
+    align-items: center;
+    justify-content: space-evenly;
+    color: whitesmoke;
 }
