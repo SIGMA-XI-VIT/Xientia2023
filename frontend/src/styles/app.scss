@@ -34,3 +34,8 @@
     //background-repeat: no-repeat;
     z-index: -1;
 }
+
+.intcont:is(::-webkit-scrollbar, ::-webkit-scrollbar-track, ::-webkit-scrollbar-thumb, ::-webkit-scrollbar-button){
+    display: none;
+}
+

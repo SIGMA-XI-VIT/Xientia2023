@@ -87,6 +87,7 @@
   cursor: pointer;
   width: max-content;
   transition: all 0.2s;
+  overflow: hidden;
   > a{
     color: inherit;
     text-decoration: none;

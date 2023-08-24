@@ -15,14 +15,16 @@ const App = () => {
   return (
     <div className="container">
       <div className="background"></div>
-      <Menu1 any />
-        <Home any />
-        <About any />
-        <Rules any />
-        <Speakers any />
-        <Sponsors any />
-        <Contact any />
-        <Submit any />
+        <Menu1 any />
+        <div className="intcont">
+          <Home any />
+          <About any />
+          <Rules any />
+          <Speakers any />
+          <Sponsors any />
+          <Contact any />
+          <Submit any />
+        </div>
     </div>
   );
 };
