@@ -1,14 +1,18 @@
 const express = require("express")
-const graphqlHTTP = require("express-graphql")
+const { graphqlHTTP } = require("express-graphql")
 const cookie_session = require("cookie-session")
 const passport = require("passport")
 
 const auth_routes = require("./routes/auth-routes")
-const countdown_routes = require("./routes/countdown-routes")
+
+//const countdown_routes = require("./routes/countdown-routes")
+
 const submission_routes = require("./routes/submission-routes")
 
 const passport_setup = require("./config/passport-setup")
 const keys = require("./config/keys")
+
+const schema = require("./schema/schema")
 
 const app = express()
 const port = 5000
@@ -34,13 +38,12 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 // graphql setup
-// app.use("/graphql", graphqlHTTP({
-
-// }))
+app.use("/graphql", graphqlHTTP({
+  schema: schema
+}))
 
 // Set up routes
 app.use("/auth", auth_routes)
-app.use("/countdown", countdown_routes)
 app.use("/submission", submission_routes)
 
 app.get("/", (req, res) => {

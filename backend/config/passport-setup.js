@@ -3,7 +3,7 @@ const GoogleStrategy = require("passport-google-oauth20").Strategy;
 const keys = require("./keys");
 
 // TEMP
-const User = require("../TEMP/user-model")
+const User = require("../models/user-model")
 
 // const dummyUser = {
 //     id: "qwerty69420",
