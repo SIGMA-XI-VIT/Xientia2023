@@ -5,10 +5,6 @@ const passport = require("passport")
 
 const auth_routes = require("./routes/auth-routes")
 
-//const countdown_routes = require("./routes/countdown-routes")
-
-const submission_routes = require("./routes/submission-routes")
-
 const passport_setup = require("./config/passport-setup")
 const keys = require("./config/keys")
 
@@ -17,7 +13,7 @@ const schema = require("./schema/schema")
 const app = express()
 const port = 5000
 
-// TEMPORARY MONGODB CONNECTION
+// MongoDB Setup
 const mongoose = require("mongoose")
 mongoose.connect(keys.mongodb.dbURI)
   .then(() => {
@@ -27,7 +23,7 @@ mongoose.connect(keys.mongodb.dbURI)
     console.error("Error connecting to MongoDB:", error);
   });
 
-
+// Cookies for the oauth
 app.use(cookie_session({
     maxAge: 24 * 60 * 60 * 1000,
     keys:[keys.session.cookieKey]
@@ -42,13 +38,8 @@ app.use("/graphql", graphqlHTTP({
   schema: schema
 }))
 
-// Set up routes
+// Set up auth routes
 app.use("/auth", auth_routes)
-app.use("/submission", submission_routes)
-
-app.get("/", (req, res) => {
-    res.send("Hello mic check 1, 2, 3, it is working.")
-})
 
 app.listen(port, () => {
     console.log(`Server is listening on port: ${port}.`)

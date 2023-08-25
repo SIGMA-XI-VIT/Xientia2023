@@ -2,30 +2,18 @@ const passport = require("passport");
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
 const keys = require("./keys");
 
-// TEMP
 const User = require("../models/user-model")
 
-// const dummyUser = {
-//     id: "qwerty69420",
-//     name: "Dummy User",
-//     email: "dummy@example.com"
-// };
-
 passport.serializeUser((user, done) => {
-    console.log("Serialized user.");
-    done(null, user.id);
-});
+    console.log("Serialized user.")
+    done(null, user.id)
+})
 
-passport.deserializeUser((id, done) => {
-    // console.log("Deserialized user.");
-    
-    // TEMP
+passport.deserializeUser((id, done) => {  
     User.findById(id).then((user) => {
         done(null, user)
     })
-
-    // done(null, dummyUser);
-});
+})
 
 passport.use(
     new GoogleStrategy({
@@ -37,11 +25,7 @@ passport.use(
         // Passport callback function
         console.log(profile);
 
-        // TODO: Save user data to database if needed
-        // Replace the following line with database logic
-        // Retrieve user data from database using profile.id
-        
-        // TEMP
+        // Saving User Info to database
         User.findOne({googleId: profile.id}).then((currentUser) => {
             if(currentUser)
             {
