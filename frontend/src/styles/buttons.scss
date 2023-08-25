@@ -1,0 +1,33 @@
+$secondary-color: rgba(255, 255, 255, 0.4); 
+$btn-hover-bg-tint-amount: 0%;
+$btn-active-bg-tint-amount: 20%;
+
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+@import '../../node_modules/bootstrap/scss/buttons';
+
+.groups{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.button{
+    button{
+        background-color: rgba(89, 89, 89, 0);
+        border-radius: 0.5rem;
+        border: 1px solid rgba(245, 245, 245, 0.3);
+        box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+        color: rgba(245, 245, 245, 0.8);
+        text-align: center;
+        padding: 1rem 0.9rem;
+    }
+    padding: 0.2rem 0.5rem;
+}
+button:hover{
+    border-color: rgba(245, 245, 245, 0.4);
+    background-color: rgba(89, 89, 89, 0.1);
+}
+button:active{
+    border-color: rgba(245, 245, 245, 0.8);
+    background-color: rgba(89, 89, 89, 0.2);
+}
