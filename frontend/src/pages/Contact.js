@@ -4,7 +4,7 @@ import '../styles/contact.scss'
 const Contact = (props) => {
   return (
     <>
-      <div className="container">
+      <div className="container" id="contact1">
         <div className="contact" id="nav5">
           <h1>CONTACT US</h1>
 

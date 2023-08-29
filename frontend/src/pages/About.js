@@ -4,7 +4,7 @@ import "../styles/about.scss";
 const About = (props) => {
   return (
     <>
-      <div className="aboutcontainer">
+      <div className="aboutcontainer" id="about">
         <div className="aboutus">
           <div className="heading">
             <h1 id="event">ABOUT XIENTIA</h1>

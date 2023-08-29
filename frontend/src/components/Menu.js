@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { BrowserRouter as Router } from "react-router-dom";
 import { Menu } from "react-feather";
 import "../styles/Menu.scss";
 
@@ -16,7 +17,7 @@ const Menu1 = () => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []); // Effect runs only once on component mount
+  }, []);
 
   const clickHandler = () => {
     setToggle((prevToggle) => !prevToggle);
@@ -32,58 +33,62 @@ const Menu1 = () => {
         <img className="logo" src="../shared/menu-burger.png" alt="Logo" />
       </div>
       <div className="menu__right">
-        <div className="menu-icon">
-          <Menu onClick={clickHandler} />
-        </div>
-        {windowWidth > 1000 ? (
-          <ul className="navigation-open">
-            <li>
-              <a href="/about">About</a>
-            </li>
-            <li>
-              <a href="/contact">Contact</a>
-            </li>
-            <li>
-              <a href="/rules">Rules</a>
-            </li>
-            <li>
-              <a href="/speakers">Speakers</a>
-            </li>
-            <li>
-              <a href="/sponsors">Sponsors</a>
-            </li>
-            <li>
-              <a href="/submit">Submit</a>
-            </li>
-            <li>
-              <a href="/login">Register/Login</a>
-            </li>
-          </ul>
-        ) : toggle ? (
-            <ul className={toggle ? "navigation-open" : "navigation"}>
+        <Router>
+          <div className="menu-icon">
+            <Menu onClick={clickHandler} />
+          </div>
+          {windowWidth > 1000 ? (
+            <ul className="navigation-open">
               <li>
-                <a href="/about">About</a>
+                <a href="#about">About</a>
               </li>
               <li>
-                <a href="/contact">Contact</a>
+                <a href="#contact1">Contact</a>
               </li>
               <li>
-                <a href="/rules">Rules</a>
+                <a href="#rules1">Rules</a>
               </li>
               <li>
-                <a href="/speakers">Speakers</a>
+                <a href="#nav3">Speakers</a>
               </li>
               <li>
-                <a href="/sponsors">Sponsors</a>
+                <a href="#nav4">Sponsors</a>
               </li>
               <li>
-                <a href="/submit">Submit</a>
+                <a href="#nav5">Submit</a>
               </li>
               <li>
-                <a href="/login">Register/Login</a>
+                <a href="/logreg">Register/Login</a>
               </li>
             </ul>
-          ):<></>}
+          ) : toggle ? (
+            <ul className={toggle ? "navigation-open" : "navigation"}>
+              <li>
+                <a href="#about">About</a>
+              </li>
+              <li>
+                <a href="#contact1">Contact</a>
+              </li>
+              <li>
+                <a href="#rules1">Rules</a>
+              </li>
+              <li>
+                <a href="#nav3">Speakers</a>
+              </li>
+              <li>
+                <a href="#nav4">Sponsors</a>
+              </li>
+              <li>
+                <a href="#nav5">Submit</a>
+              </li>
+              <li>
+                <a href="/logreg">Register/Login</a>
+              </li>
+            </ul>
+          ) : (
+            <></>
+          )}
+        </Router>
       </div>
     </div>
   );

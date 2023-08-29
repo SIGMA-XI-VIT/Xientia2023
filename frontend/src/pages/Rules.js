@@ -3,7 +3,7 @@ import "../styles/rules.scss";
 
 const Rules = (props) => {
   return (
-    <div className="rules">
+    <div className="rules" id="rules1">
       <div className="rulesbox">
         <div className="rulesTitle">
           <h1 id="rulesTitle">GUIDELINES</h1>
