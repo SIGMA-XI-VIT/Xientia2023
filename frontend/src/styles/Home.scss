@@ -1,3 +1,5 @@
+@import '../styles/variables';
+
 *{
     margin: 0;
     padding: 0;
@@ -16,7 +18,7 @@
 }
 
 .homeBox{
-    height: 30rem;
+    height: 40rem;
     max-width: 90rem;
     width: 100%;
     position: relative;
@@ -25,19 +27,21 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
-    color: whitesmoke;
-    backdrop-filter: blur(0.2rem);
+    color: $primary-text;
+    backdrop-filter: blur(0.3rem);
     padding: 2rem;
     border-radius: 2.5rem;
-    border: 2px solid rgba(245, 245, 245, 0.6);
+    border: 2px solid rgba(245, 245, 245, 0.2);
 }
 
 .homeTitle{
+    filter: brightness(0.85);
     font: normal normal 700 60px monospace;
+    height: 250px;
 }
 
 .homeText{
-    font: normal normal 400 16px/24px monospace;
+    font: normal normal 400 18px/24px monospace;
 }
 
 

@@ -1,0 +1,15 @@
+$primary: #F7FC07;
+$primary-1: #07B2FC;
+$secondary: #00132B;
+$secondary-1: #194271;
+$primary-text: #F1F1F1;
+
+
+@font-face {
+    font-family: Anderson Grotesk;
+    src: url('../shared/AndersonGrotesk.otf');
+    font-weight: 200;
+    font-style: normal;
+}
+
+$primary-font: Anderson Grotesk;

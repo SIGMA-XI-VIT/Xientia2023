@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import {
   BrowserRouter as Router,
   Route,
@@ -8,7 +8,6 @@ import {
 import "./styles/app.scss";
 import Menu1 from "./components/Menu";
 import Landing from "./pages/Landing";
-import About from "./pages/About";
 
 const App = () => {
   return (

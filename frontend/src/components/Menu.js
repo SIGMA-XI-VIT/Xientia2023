@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Menu } from "react-feather";
+import logo from '../shared/logo_final.svg';
 import "../styles/Menu.scss";
 
 const Menu1 = () => {
@@ -30,7 +31,7 @@ const Menu1 = () => {
       }
     >
       <div className="menu__left">
-        <img className="logo" src="../shared/menu-burger.png" alt="Logo" />
+        <img className="logo" src={logo} alt="Logo"/>
       </div>
       <div className="menu__right">
         <Router>
@@ -43,9 +44,6 @@ const Menu1 = () => {
                 <a href="#about">About</a>
               </li>
               <li>
-                <a href="#contact1">Contact</a>
-              </li>
-              <li>
                 <a href="#rules1">Rules</a>
               </li>
               <li>
@@ -53,6 +51,9 @@ const Menu1 = () => {
               </li>
               <li>
                 <a href="#nav4">Sponsors</a>
+              </li>
+              <li>
+                <a href="#contact1">Contact</a>
               </li>
               <li>
                 <a href="#nav5">Submit</a>
@@ -67,9 +68,6 @@ const Menu1 = () => {
                 <a href="#about">About</a>
               </li>
               <li>
-                <a href="#contact1">Contact</a>
-              </li>
-              <li>
                 <a href="#rules1">Rules</a>
               </li>
               <li>
@@ -77,6 +75,9 @@ const Menu1 = () => {
               </li>
               <li>
                 <a href="#nav4">Sponsors</a>
+              </li>
+              <li>
+                <a href="#contact1">Contact</a>
               </li>
               <li>
                 <a href="#nav5">Submit</a>

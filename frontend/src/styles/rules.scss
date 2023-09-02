@@ -1,3 +1,5 @@
+@import '../styles/variables';
+
 *{
     margin: 0;
     padding: 0;
@@ -26,8 +28,8 @@
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-evenly;
-    color: whitesmoke;
-    backdrop-filter: blur(0.2rem);
+    color: $primary-text;
+    backdrop-filter: blur(0.3rem);
     padding: 2rem;
     border-radius: 2.5rem;
     border: 2px solid rgba(245, 245, 245, 0.2);
@@ -36,12 +38,12 @@
 .link{
     font-size: 1.1em;
     text-decoration: none;
-    color: rgb(215, 55, 255);
+    color: $primary;//rgb(215, 55, 255);
 }
 
 .rulesTitle{
     font: normal normal 700 32px monospace;
-    translate: 0 -20%;
+    //translate: 0 -20%;
     padding: 1rem;
 }
 
@@ -67,7 +69,8 @@
 }
 
 .text{
-    font: normal normal 500 18px Mulish;
+    font: normal normal 500 18px;
+    line-height: 26px;
     letter-spacing: 0.05em;
     padding: 0.6em;
 }
@@ -77,7 +80,8 @@
 }
 
 .text6{
-    font: normal normal 500 18px Mulish;
+    font: normal normal 500 18px;
+    line-height: 26px;
     letter-spacing: 0.05em;
     padding: 0.6em;
 }

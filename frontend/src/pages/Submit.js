@@ -7,7 +7,7 @@ const Submit = (props) => {
     <>
       <div className="container">
         <div className="submit-container">
-          <h1 className="submitTitle">XIENTIA</h1>
+          <p className="submitTitle" id="nav5">Submit Your Presentations</p>
           <Form className="form">
             <Form.Label htmlFor="inlineFormInput">Team Name</Form.Label>
             <Form.Control

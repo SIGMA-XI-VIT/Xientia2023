@@ -11,7 +11,7 @@ const Groups = (props) => {
         </a>
       </div>
 
-      <div className="button">
+      <div className="button1">
         <a href="https://discord.gg/hy99VRz7q8">
         <Button variant="dark">Join our Discord Server</Button>
         </a>
