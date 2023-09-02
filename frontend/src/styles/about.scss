@@ -1,3 +1,6 @@
+@import '../styles/variables';
+
+
 *{
     margin: 0;
     padding: 0;
@@ -25,15 +28,15 @@
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-evenly;
-    color: whitesmoke;
-    backdrop-filter: blur(0.2rem);
+    color: $primary-text;
+    backdrop-filter: blur(0.3rem);
     padding: 2rem;
     border-radius: 2.5rem;
     border: 2px solid rgba(245, 245, 245, 0.2);
 }
 
 .heading{
-    font: normal normal 700 32px monospace;
+    font: normal normal 700 36px;
     translate: 0 -20%;
     padding: 1rem;
 }
@@ -52,7 +55,8 @@
 }
 
 .para1, .para2{
-    font: normal normal 500 18px Mulish;
+    font: normal normal 18px;
+    line-height: 32px;
     letter-spacing: 0.05em;
     padding: 2em;
 }
