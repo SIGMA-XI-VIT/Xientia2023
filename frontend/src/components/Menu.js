@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router } from "react-router-dom";
 import { Menu } from "react-feather";
 import logo from '../shared/logo_final.svg';
 import "../styles/Menu.scss";
@@ -31,10 +30,11 @@ const Menu1 = () => {
       }
     >
       <div className="menu__left">
+        <a href="/">
         <img className="logo" src={logo} alt="Logo"/>
+        </a>
       </div>
       <div className="menu__right">
-        <Router>
           <div className="menu-icon">
             <Menu onClick={clickHandler} />
           </div>
@@ -89,7 +89,6 @@ const Menu1 = () => {
           ) : (
             <></>
           )}
-        </Router>
       </div>
     </div>
   );
