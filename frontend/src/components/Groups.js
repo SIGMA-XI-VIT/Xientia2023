@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 import '../styles/buttons.scss';
+import '../styles/groups.scss';
 
 const Groups = (props) => {
   return (

@@ -30,7 +30,6 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     overflow: hidden;
     align-items: center;
     justify-content: space-evenly;
@@ -50,6 +49,7 @@
     max-width: 40em;
     min-width: 20em;
     width: 100%;
+    padding: 5px 0;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -64,7 +64,7 @@
 }
 
 .form-control{
-    
+    max-width: 20rem;
     background-color: rgba(245, 245, 245, 0.1);
     border: none;
     --bs-body-color: rgba(245, 245, 245, 0.8);
