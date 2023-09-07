@@ -3,7 +3,7 @@ import { Col, Button, Form } from "react-bootstrap";
 import "../styles/submit.scss";
 
 const Submit = (props) => {
-  const [formData, setFormData] = useState({
+  let [formData, setFormData] = useState({
     teamName: "",
     numberOfMembers: "",
     teamLeaderEmail: "",
@@ -21,6 +21,14 @@ const Submit = (props) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     sendDataToBackend(formData);
+
+    setFormData({
+      teamName: "",
+      numberOfMembers: "",
+      teamLeaderEmail: "",
+      pptLink: "",
+    })
+
   };
 
   const sendDataToBackend = async (data) => {
