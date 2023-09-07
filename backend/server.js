@@ -1,4 +1,5 @@
 const express = require("express")
+const cors = require("cors")
 const { graphqlHTTP } = require("express-graphql")
 const cookie_session = require("cookie-session")
 const passport = require("passport")
@@ -12,6 +13,12 @@ const schema = require("./schema/schema")
 
 const app = express()
 const port = 5000
+
+app.use(cors({
+  origin: "http://localhost:3000",
+  methods: "GET, HEAD, PUT, PATCH, POST, DELETE",
+  allowedHeaders: "Content-Type, Authorization",
+}))
 
 // MongoDB Setup
 const mongoose = require("mongoose")

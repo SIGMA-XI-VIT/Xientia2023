@@ -68,11 +68,13 @@ const SubmissionType = new GraphQLObjectType({
     name: "Submission",
     fields: ()=>({
         teamName: { type: new GraphQLNonNull(GraphQLString) },
-        submissionLink: { type: new GraphQLNonNull(GraphQLString) }
+        numberOfMembers: { type: new GraphQLNonNull(GraphQLString) },
+        teamLeaderEmail: { type: new GraphQLNonNull(GraphQLString) },
+        pptLink: { type: new GraphQLNonNull(GraphQLString) },
     })
 })
 
-const dDay = new Date('2023-09-13T00:00:00')
+const dDay = new Date('2023-09-23T00:00:00')
 const CountdownType = new GraphQLObjectType({
     name: "Countdown",
     fields: ()=>({
@@ -176,8 +178,10 @@ const Mutation = new GraphQLObjectType({
         submitLink: {
             type: SubmissionType,
             args: {
-                teamName: { type: new GraphQLNonNull(GraphQLString) },
-                submissionLink: { type: new GraphQLNonNull(GraphQLString) }
+                teamName: { type: GraphQLString },
+                numberOfMembers: { type: GraphQLString },
+                teamLeaderEmail: { type: GraphQLString },
+                pptLink: { type: GraphQLString },
             },
             async resolve(parent, args)
             {
@@ -191,14 +195,16 @@ const Mutation = new GraphQLObjectType({
                         valueInputOption: "RAW",
                         insertDataOption: "INSERT_ROWS",
                         resource: {
-                            values: [[args.teamName, args.submissionLink]]
+                            values: [[args.teamName, args.numberOfMembers, args.teamLeaderEmail, args.pptLink]]
                         }
                     })
             
                     console.log(response.data)
                     return {
                         teamName: args.teamName,
-                        submissionLink: args.submissionLink
+                        numberOfMembers: args.numberOfMembers,
+                        teamLeaderEmail: args.teamLeaderEmail,
+                        pptLink: args.pptLink,
                     }
                 }
                 catch (error)
