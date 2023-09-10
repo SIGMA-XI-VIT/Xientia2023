@@ -3,7 +3,6 @@
 @import '../styles/variables';
 
 *{
-    
     font-family: 'Poppins';
     letter-spacing: 0.01rem;
     margin: 0;
@@ -16,6 +15,15 @@
     ::-webkit-scrollbar:vertical{
         height: 25vh;
     }
+    ::-moz-selection {
+        color: $secondary-1;
+        background: #FCF707E1;
+      }
+      
+      ::selection {
+        color: $secondary-1;
+        background: #FCF707E1;
+      }
 }
 
 .container{

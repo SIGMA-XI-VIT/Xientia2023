@@ -1,8 +1,14 @@
 import React, { useState } from "react";
 import { Col, Button, Form } from "react-bootstrap";
+import SuccessModal from "../components/SuccessModal";
 import "../styles/submit.scss";
 
 const Submit = (props) => {
+  const [showModal, setShow] = useState(false);
+  const closeHandler = () => {
+    setShow(false);
+  }
+
   let [formData, setFormData] = useState({
     teamName: "",
     numberOfMembers: "",
@@ -18,7 +24,7 @@ const Submit = (props) => {
     });
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     sendDataToBackend(formData);
 
@@ -27,8 +33,7 @@ const Submit = (props) => {
       numberOfMembers: "",
       teamLeaderEmail: "",
       pptLink: "",
-    })
-
+    });
   };
 
   const sendDataToBackend = async (data) => {
@@ -43,10 +48,8 @@ const Submit = (props) => {
       },
     };
 
-    try
-    {
-
-      fetch("http://localhost:5000/graphql", {
+    try {
+      await fetch("http://localhost:5000/graphql", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -55,14 +58,12 @@ const Submit = (props) => {
       })
         .then((response) => response.json())
         .then((data) => {
+          setShow(true);
           console.log(data);
         });
+    } catch (error) {
+      console.log(error);
     }
-    catch(error)
-    {
-      console.log(error)
-    }
-
   };
 
   return (
@@ -120,6 +121,7 @@ const Submit = (props) => {
               </Button>
             </Col>
           </Form>
+            {showModal && <SuccessModal show={showModal} closeHandler={closeHandler}/> }
         </div>
         <footer id="nav5"></footer>
       </div>

@@ -57,5 +57,19 @@
     overflow: auto;
     align-items: center;
     justify-content: space-evenly;
-    color: $primary-text
+    color: $primary-text;
+    text-align: center;
+    text-wrap: balance;
+    padding: 2rem;
+    h4{
+        font-size: 1.1rem;
+    }
+    a{
+        color: $primary-1;
+        text-decoration: none;
+        transition: 0.2s;
+    }
+    a:hover{
+        color: $primary;
+    }
 }
