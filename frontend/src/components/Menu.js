@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router } from "react-router-dom";
 import { Menu } from "react-feather";
 import logo from '../shared/logo_final.svg';
 import "../styles/Menu.scss";
@@ -31,32 +30,33 @@ const Menu1 = () => {
       }
     >
       <div className="menu__left">
+        <a href="/">
         <img className="logo" src={logo} alt="Logo"/>
+        </a>
       </div>
       <div className="menu__right">
-        <Router>
           <div className="menu-icon">
             <Menu onClick={clickHandler} />
           </div>
           {windowWidth > 1000 ? (
             <ul className="navigation-open">
               <li>
-                <a href="#about">About</a>
+                <a href="/#about">About</a>
               </li>
               <li>
-                <a href="#rules1">Rules</a>
+                <a href="/#rules1">Rules</a>
               </li>
               <li>
-                <a href="#nav3">Speakers</a>
+                <a href="/#nav3">Speakers</a>
               </li>
               <li>
-                <a href="#nav4">Sponsors</a>
+                <a href="/#nav4">Sponsors</a>
               </li>
               <li>
-                <a href="#contact1">Contact</a>
+                <a href="/#contact1">Contact</a>
               </li>
               <li>
-                <a href="#nav5">Submit</a>
+                <a href="/#nav5">Submit</a>
               </li>
               <li>
                 <a href="/logreg">Register/Login</a>
@@ -65,22 +65,22 @@ const Menu1 = () => {
           ) : toggle ? (
             <ul className={toggle ? "navigation-open" : "navigation"}>
               <li>
-                <a href="#about">About</a>
+                <a href="/#about">About</a>
               </li>
               <li>
-                <a href="#rules1">Rules</a>
+                <a href="/#rules1">Rules</a>
               </li>
               <li>
-                <a href="#nav3">Speakers</a>
+                <a href="/#nav3">Speakers</a>
               </li>
               <li>
-                <a href="#nav4">Sponsors</a>
+                <a href="/#nav4">Sponsors</a>
               </li>
               <li>
-                <a href="#contact1">Contact</a>
+                <a href="/#contact1">Contact</a>
               </li>
               <li>
-                <a href="#nav5">Submit</a>
+                <a href="/#nav5">Submit</a>
               </li>
               <li>
                 <a href="/logreg">Register/Login</a>
@@ -89,7 +89,6 @@ const Menu1 = () => {
           ) : (
             <></>
           )}
-        </Router>
       </div>
     </div>
   );
