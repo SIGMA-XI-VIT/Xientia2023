@@ -1,47 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import SuccessModal from "../components/RegisterModal";
 import '../styles/logreg.scss';
 
 function LoginForm({ switchToSignUp }) {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
 
-  const handleSignIn = (e) => {
+  const handleSignIn = async (e) => {
     e.preventDefault();
     // Add your sign-in logic here
+    window.location.href = 'http://localhost:5000/auth/google'
+    sessionStorage.setItem('isLoggedIn', true)
   };
 
   return (
     <div className="card login">
       <h2><i className="fas fa-key"></i> Sign In</h2>
       <form onSubmit={handleSignIn}>
-        <div className="form-group">
-          <label htmlFor="email">Email:</label>
-          <input
-            className="input"
-            name="email"
-            type="text"
-            placeholder='Enter e-mail ID'
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="password">Password:</label>
-          <input
-            className="input"
-            name="password"
-            type="password"
-            placeholder='Enter password'
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
-        <button className="button11" type="submit">Sign In</button>
+        <button className="btn btn-primary btn-g" type="submit">Sign in with Google</button>
       </form>
       <p className="link-login">
-        Don't have an account yet?  
-        <span className="switchText" onClick={switchToSignUp}>Sign up!</span>
+        Haven't registered your team yet?
+        <span className="switchText" onClick={switchToSignUp}>Register Team!</span>
       </p>
     </div>
   );
@@ -235,8 +213,35 @@ function SignupForm({ switchToLogin }) {
   );
 }
 
+function LoggedIn({ switchToSignUp }) {
+  
+  const handleClick = (e) => {
+    console.log('Clicked')
+    switchToSignUp()
+  }
+  
+  return (
+    <div className="text-center">
+      <h2>You are logged in!</h2>
+      <p className="link-login mt-10">
+        Haven't registered your team yet?
+        <span className="switchText" onClick={handleClick}>Register Team!</span>
+      </p>
+    </div>
+  );
+}
+
 function Logreg() {
   const [showLogin, setShowLogin] = useState(true);
+  const [isKeySet, setIsKeySet] = useState(false)
+  
+  useEffect(() => {
+    if(!sessionStorage.getItem('isLoggedIn'))
+    {
+      sessionStorage.setItem('isLoggedIn', false)
+      setIsKeySet(true)
+    }
+  }, [isKeySet])
 
   const switchToSignUp = () => {
     setShowLogin(false);
@@ -248,11 +253,20 @@ function Logreg() {
 
   return (
     <div className='body'>
-      {showLogin ? (
-        <LoginForm switchToSignUp={switchToSignUp} />
+      {/* {sessionStorage.getItem('isLoggedIn') === "true" ? 
+      (<LoggedIn switchToSignUp={switchToSignUp} />) : showLogin ? (
+        <LoginForm switchToSignUp={switchToSignUp}/>
       ) : (
         <SignupForm switchToLogin={switchToLogin} />
-      )}
+      )} */}
+      {
+        sessionStorage.getItem('isLoggedIn') === "true" ?
+        (showLogin ? <LoggedIn switchToSignUp={switchToSignUp}/> : <SignupForm switchToLogin={switchToLogin} />) : (showLogin ? (
+          <LoginForm switchToSignUp={switchToSignUp}/>
+        ) : (
+          <SignupForm switchToLogin={switchToLogin} />
+        ))
+      }
     </div>
   );
 }
