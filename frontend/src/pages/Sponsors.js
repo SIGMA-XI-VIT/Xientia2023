@@ -11,7 +11,7 @@ const Sponsors = (props) => {
           </div> 
 
         <a
-          href=""
+          href="/"
           target="_blank"
         >
             <p>

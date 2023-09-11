@@ -49,7 +49,7 @@ const Submit = (props) => {
     };
 
     try {
-      await fetch("http://localhost:5000/graphql", {
+      await fetch("https://xientia23-api.onrender.com/graphql", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -10,8 +10,8 @@ const {
     GraphQLInt
 } = graphql
 
-const credentials = require("../config/secrets.json")
-const spreadSheetId = require("../config/keys").google.sheetId
+const credentials = require("../secrets.json")
+const spreadSheetId = require("../keys").google.sheetId
 const { google } = require("googleapis")
 
 const Participant = require("../models/participant-model")
@@ -23,6 +23,7 @@ const ParticipantType = new GraphQLObjectType({
         id: { type: GraphQLID },
         name: { type: GraphQLString },
         regno: { type: GraphQLString },
+        emailId: { type: GraphQLString },
         team: {
             type: TeamType,
             resolve(parent, args)
@@ -53,7 +54,8 @@ const ParticipantInputType = new GraphQLInputObjectType({
     name: "ParticipantInput",
     fields: ()=>({
         name: { type: new GraphQLNonNull(GraphQLString) },
-        regno: { type: new GraphQLNonNull(GraphQLString) }
+        regno: { type: new GraphQLNonNull(GraphQLString) },
+        emailId: { type: new GraphQLNonNull(GraphQLString) },
     })
 })
 
@@ -167,6 +169,7 @@ const Mutation = new GraphQLObjectType({
                     const participant = new Participant({
                         name: member.name,
                         regno: member.regno,
+                        emailId: member.emailId,
                         teamId: team._id
                     })
                     participant.save()

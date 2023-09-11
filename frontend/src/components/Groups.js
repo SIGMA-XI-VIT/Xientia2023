@@ -7,7 +7,7 @@ const Groups = (props) => {
   return (
     <div className="groups">
       <div className="button">
-        <a href="">
+        <a href="/">
           <Button variant="dark">Join the WhatsApp Group</Button>
         </a>
       </div>
