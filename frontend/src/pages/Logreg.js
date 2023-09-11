@@ -7,7 +7,7 @@ function LoginForm({ switchToSignUp }) {
   const handleSignIn = async (e) => {
     e.preventDefault();
     // Add your sign-in logic here
-    window.location.href = 'http://localhost:5000/auth/google'
+    window.location.href = 'https://xientia23-api.onrender.com/auth/google'
     sessionStorage.setItem('isLoggedIn', true)
   };
 
@@ -115,7 +115,7 @@ function SignupForm({ switchToLogin }) {
     
 
     try {
-      await fetch("http://localhost:5000/graphql", {
+      await fetch("https://xientia23-api.onrender.com/graphql", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -253,12 +253,6 @@ function Logreg() {
 
   return (
     <div className='body'>
-      {/* {sessionStorage.getItem('isLoggedIn') === "true" ? 
-      (<LoggedIn switchToSignUp={switchToSignUp} />) : showLogin ? (
-        <LoginForm switchToSignUp={switchToSignUp}/>
-      ) : (
-        <SignupForm switchToLogin={switchToLogin} />
-      )} */}
       {
         sessionStorage.getItem('isLoggedIn') === "true" ?
         (showLogin ? <LoggedIn switchToSignUp={switchToSignUp}/> : <SignupForm switchToLogin={switchToLogin} />) : (showLogin ? (
