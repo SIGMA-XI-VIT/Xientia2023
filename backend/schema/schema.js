@@ -10,8 +10,8 @@ const {
     GraphQLInt
 } = graphql
 
-const credentials = require("../config/secrets.json")
-const spreadSheetId = require("../config/keys").google.sheetId
+const credentials = require("../secrets.json")
+const spreadSheetId = require("../keys").google.sheetId
 const { google } = require("googleapis")
 
 const Participant = require("../models/participant-model")

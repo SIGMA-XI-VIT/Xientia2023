@@ -7,7 +7,7 @@ const passport = require("passport")
 const auth_routes = require("./routes/auth-routes")
 
 const passport_setup = require("./config/passport-setup")
-const keys = require("./config/keys")
+const keys = require("./keys")
 
 const schema = require("./schema/schema")
 
