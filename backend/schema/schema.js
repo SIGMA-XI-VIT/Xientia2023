@@ -23,6 +23,7 @@ const ParticipantType = new GraphQLObjectType({
         id: { type: GraphQLID },
         name: { type: GraphQLString },
         regno: { type: GraphQLString },
+        emailId: { type: GraphQLString },
         team: {
             type: TeamType,
             resolve(parent, args)
@@ -53,7 +54,8 @@ const ParticipantInputType = new GraphQLInputObjectType({
     name: "ParticipantInput",
     fields: ()=>({
         name: { type: new GraphQLNonNull(GraphQLString) },
-        regno: { type: new GraphQLNonNull(GraphQLString) }
+        regno: { type: new GraphQLNonNull(GraphQLString) },
+        emailId: { type: new GraphQLNonNull(GraphQLString) },
     })
 })
 
@@ -167,6 +169,7 @@ const Mutation = new GraphQLObjectType({
                     const participant = new Participant({
                         name: member.name,
                         regno: member.regno,
+                        emailId: member.emailId,
                         teamId: team._id
                     })
                     participant.save()
