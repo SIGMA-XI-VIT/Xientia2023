@@ -15,7 +15,7 @@ const app = express()
 const port = 5000
 
 app.use(cors({
-  origin: "http://localhost:3000",
+  origin: "https://xientia23.onrender.com",
   methods: "GET, HEAD, PUT, PATCH, POST, DELETE",
   allowedHeaders: "Content-Type, Authorization",
 }))
