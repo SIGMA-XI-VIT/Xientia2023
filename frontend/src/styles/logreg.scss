@@ -15,6 +15,7 @@
     border-radius: 5px;
     border: none;
     height: 30px;
+    width: 15rem;
     text-align: center;
     color: $primary-text;
     background-color: rgba(245, 245, 245, 0.2);
@@ -31,16 +32,22 @@
     width: 5rem;
     text-align: center;
     border-radius: 5px;
-    background-color: rgba(245, 245, 245, 0.9);
+    background-color: rgba(245, 245, 245, 0);
+    color: $primary-text;
     border: 1px solid #ccc;
     margin: 5px;
     margin-top: 0.6rem;
+    transition: 0.2s;
   }
   .button11:hover {
     cursor: pointer;
     background: $primary-1;
     color: $primary-text;
-    animation: shake 0.5s ease-in-out;
+    border: none;
+  }
+  .button11:active{
+    background: $primary;
+    color: $secondary-1;
   }
   form {
     padding: 1.5rem;
@@ -48,6 +55,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  .form-scroll{
+    h2{
+      overflow: visible;
+      line-height: 2.5rem;
+    }
+    text-align: center;
   }
   .form-group {
     margin: 10px;
@@ -73,11 +87,23 @@
   }
   .login {
     z-index: 2;
+    justify-content: space-evenly;
     animation: toRightSignup 1s;
     animation: toPosition 1s;
+    .btn-primary{
+      --bs-btn-color: #f1f1f1;
+      --bs-btn-bg: #00000000;
+      --bs-btn-border-color: #f1f1f1;
+      --bs-btn-hover-bg: #194271;
+      --bs-btn-hover-border-color: #194271;
+      --bs-btn-active-color: #194271;
+      --bs-btn-active-bg: #fcf707;
+      --bs-btn-active-border-color: #fcf707;
+    }
   }
   .signup {
     z-index: 1;
+    height: 45rem;
     animation: toRightLogin 1s;
     animation: toPositionSignup 1s;
   }

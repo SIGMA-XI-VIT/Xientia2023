@@ -73,7 +73,7 @@ const Submit = (props) => {
           <p className="submitTitle" id="nav5">
             Submit Your Presentations
           </p>
-          <Form className="form" onSubmit={handleSubmit}>
+          <Form className="form submit-form" onSubmit={handleSubmit}>
             <Form.Label htmlFor="inlineFormInput">Team Name</Form.Label>
             <Form.Control
               value={formData.teamName}
