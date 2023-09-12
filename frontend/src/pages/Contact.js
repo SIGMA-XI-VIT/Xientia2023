@@ -5,7 +5,7 @@ const Contact = (props) => {
   return (
     <>
       <div className="container" id="contact1">
-        <div className="contact" id="nav5">
+        <div className="contact">
           <h1>CONTACT US</h1>
 
           <div className="main_contact">
