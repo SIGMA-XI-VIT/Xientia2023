@@ -1,0 +1,42 @@
+$secondary-color: rgba(255, 255, 255, 0.4); 
+$btn-hover-bg-tint-amount: 0%;
+$btn-active-bg-tint-amount: 20%;
+
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+@import '../../node_modules/bootstrap/scss/buttons';
+@import '../styles/variables';
+
+.groups{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.button, .button1{
+    button{
+        background-color: transparent;
+        border-radius: 0.5rem;
+        border: 1px solid rgba(245, 245, 245, 0.3);
+        box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+        color: $primary-text;
+        text-align: center;
+        padding: 1rem 0.9rem;
+    }
+    padding: 0.2rem 0.5rem;
+}
+
+.button{
+    button{
+        --bs-btn-hover-bg: #25D36650;
+        --bs-btn-active-border-color: none;
+        --bs-btn-active-bg: #25D36650;
+    }
+}
+
+.button1{
+    button{
+        --bs-btn-hover-bg: #5865F250;
+        --bs-btn-active-border-color: none;
+        --bs-btn-active-bg: #5865F250;
+    }
+}

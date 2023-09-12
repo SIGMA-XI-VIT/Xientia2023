@@ -1,0 +1,111 @@
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../../node_modules/bootstrap/scss/forms/form-control";
+@import "../../node_modules/bootstrap/scss/mixins/utilities";
+@import "../../node_modules/bootstrap/scss/buttons";
+@import "../styles/variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.submit-container {
+  height: 40rem;
+  max-width: 90rem;
+  min-width: 10rem;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: center;
+  justify-content: space-evenly;
+  color: $primary-text;
+  backdrop-filter: blur(0.3rem);
+  padding: 2rem;
+  border-radius: 2.5rem;
+  border: 2px solid rgba(245, 245, 245, 0.2);
+}
+
+.submitTitle {
+  font-size: 2rem;
+}
+
+.form {
+  height: 50vh;
+  max-width: 40em;
+  min-width: 20em;
+  width: 100%;
+  padding: 5px 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.form-label {
+  font-size: 18px;
+  padding: 0.3em;
+  padding-bottom: -1em;
+  margin-bottom: 0em;
+}
+
+.form-control {
+  max-width: 20rem;
+  background-color: rgba(245, 245, 245, 0.1);
+  border: none;
+  --bs-body-color: rgba(245, 245, 245, 0.8);
+  &::placeholder {
+    color: rgba(245, 245, 245, 0.3);
+  }
+  &:active {
+    background-color: rgba(245, 245, 245, 0.1);
+    border: none;
+    ::placeholder {
+      display: none;
+    }
+  }
+  &:focus {
+    background-color: rgba(245, 245, 245, 0.1);
+    transition: none;
+    box-shadow: none;
+    border: none;
+    ::placeholder {
+      display: none;
+    }
+  }
+}
+
+.col-auto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  pointer-events: none;
+  margin: 0;
+}
+
+.btn-primary {
+  background-color: rgba(204, 191, 14, 0.06);
+  --bs-btn-hover-bg: #f7fc073c;
+  --bs-btn-active-bg: #f7fc075a;
+  --bs-btn-active-border-color: none;
+  --bs-btn-hover-border-color: rgba(245, 245, 245, 0.8);
+  --bs-btn-border-color: rgba(245, 245, 245, 0.6);
+}

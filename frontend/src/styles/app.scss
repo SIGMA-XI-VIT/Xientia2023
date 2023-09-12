@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import '../styles/variables';
+
+*{
+    font-family: 'Poppins';
+    letter-spacing: 0.01rem;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: auto;
+    ::-webkit-scrollbar{
+        width: 5px;
+    }
+    ::-webkit-scrollbar:vertical{
+        height: 25vh;
+    }
+    ::-moz-selection {
+        color: $secondary-1;
+        background: #FCF707E1;
+      }
+      
+      ::selection {
+        color: $secondary-1;
+        background: #FCF707E1;
+      }
+}
+
+.container{
+    height: 100vh;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: $primary-text;
+}
+
+.background{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-image: url('../shared/bg.jpg');
+    //background-color: #111113;
+    //background-image: url('https://preview.redd.it/cq2kq8nfxaq61.png?width=960&crop=smart&auto=webp&s=466552b6708014f8405427f234787ab75f55cfe8');
+    filter: brightness(0.4);
+    background-position: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.intcont:is(::-webkit-scrollbar, ::-webkit-scrollbar-track, ::-webkit-scrollbar-thumb, ::-webkit-scrollbar-button){
+    display: none;
+}
+

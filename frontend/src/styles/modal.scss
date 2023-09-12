@@ -1,0 +1,28 @@
+@import './variables';
+
+.modal-content{
+    --bs-modal-bg: #00132B;
+    --bs-modal-color: #F1F1F1;
+}
+
+.modal-body{
+    letter-spacing: 0.03rem;
+    line-height: 1.7rem;
+}
+
+.btn-close{
+    --bs-btn-close-color: #F1F1F1;
+}
+.modal-footer{
+    .btn{
+        --bs-btn-color: #F1F1F1;
+        --bs-btn-bg: rgba(13, 13, 13, 0);
+        --bs-btn-hover-bg: #FCF70780;
+        --bs-btn-active-color: #00132B;
+        --bs-btn-active-bg: #FCF707;
+    }
+}
+
+.modal-header, .modal-body, .modal-footer{
+    border: none !important;
+}
