@@ -42,7 +42,10 @@
 }
 
 .rulesTitle{
-    font: normal normal 700 32px monospace;
+    h1{
+        line-height: 2.5rem;
+    }
+    font: normal normal 700 26px monospace;
     //translate: 0 -20%;
     padding: 1rem;
 }
