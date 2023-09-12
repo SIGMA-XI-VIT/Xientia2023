@@ -9,6 +9,9 @@ const Speakers = (props) => {
           <h1>SPEAKERS</h1>
           <div className="cardxs">
             <div className="cardx" id="c1">
+              <h2>Watch this space for the reveal!</h2>
+            </div>
+            {/*<div className="cardx" id="c1">
               <img src="../shared/monkey meme.png" className="photo" alt="" />
 
               <div className="cardx_main">
@@ -42,7 +45,7 @@ const Speakers = (props) => {
                 <p className="text1">Person 4</p>
                 <p className="text2">Senior Chief Awesome</p>
               </div>
-            </div>
+            </div>*/}
           </div>
         </div>
       </div>

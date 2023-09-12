@@ -49,9 +49,9 @@ const Menu1 = () => {
               <li>
                 <a href="/#nav3">Speakers</a>
               </li>
-              <li>
+              {/*<li>
                 <a href="/#nav4">Sponsors</a>
-              </li>
+              </li>*/}
               <li>
                 <a href="/#contact1">Contact</a>
               </li>
