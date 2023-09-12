@@ -101,11 +101,13 @@ input[type="number"]::-webkit-outer-spin-button {
   margin: 0;
 }
 
-.btn-primary {
-  background-color: rgba(204, 191, 14, 0.06);
-  --bs-btn-hover-bg: #f7fc073c;
-  --bs-btn-active-bg: #f7fc075a;
-  --bs-btn-active-border-color: none;
-  --bs-btn-hover-border-color: rgba(245, 245, 245, 0.8);
-  --bs-btn-border-color: rgba(245, 245, 245, 0.6);
+.submit-form{
+  .btn-primary {
+    background-color: rgba(204, 191, 14, 0.06);
+    --bs-btn-hover-bg: #f7fc073c;
+    --bs-btn-active-bg: #f7fc075a;
+    --bs-btn-active-border-color: none;
+    --bs-btn-hover-border-color: rgba(245, 245, 245, 0.8);
+    --bs-btn-border-color: rgba(245, 245, 245, 0.6);
+  }
 }

@@ -6,6 +6,7 @@ import Speakers from "./Speakers";
 import Sponsors from "./Sponsors";
 import Contact from "./Contact";
 import Submit from "./Submit";
+//import '../styles/landing.scss';
 
 const Landing = props => {
     return (
