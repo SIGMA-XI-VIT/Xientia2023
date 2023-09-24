@@ -58,9 +58,9 @@ const Menu1 = () => {
               <li>
                 <a href="/#nav5">Submit</a>
               </li>
-              <li>
+              /*<li>
                 <a href="/logreg">Register/Login</a>
-              </li>
+              </li>*/
             </ul>
           ) : toggle ? (
             <ul className={toggle ? "navigation-open" : "navigation"}>
@@ -82,9 +82,9 @@ const Menu1 = () => {
               <li>
                 <a href="/#nav5">Submit</a>
               </li>
-              <li>
+              /*<li>
                 <a href="/logreg">Register/Login</a>
-              </li>
+              </li>*/
             </ul>
           ) : (
             <></>
